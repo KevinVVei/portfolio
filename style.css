@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #445964;
+
+}
+
+li {
+  text-decoration: none;
+}
+
+.home {
+  height: 100bh;
+}
+
+.btn {
+  background-color: #445964;
+}
+
+.portrait {
+  width: 183px;
+  height: 207px;
+}
