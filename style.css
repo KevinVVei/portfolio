@@ -1,4 +1,4 @@
-body {
+* {
   margin: 0;
   padding: 0;
 }
@@ -10,22 +10,48 @@ ul {
 a {
   text-decoration: none;
   color: #445964;
-
 }
 
 li {
   text-decoration: none;
 }
 
-.home {
-  height: 100bh;
-}
+
 
 .btn {
   background-color: #445964;
 }
 
+.gray {
+  background-color: gray;
+}
+
 .portrait {
   width: 183px;
   height: 207px;
+}
+
+.custom-fw {
+  font-weight: 900;
+  color: #445964;
+}
+
+.custom-about-h1 {
+  font-size: 64px;
+  font-weight: 900;
+  color: #445964;
+}
+
+.empty-box {
+  height: 120px;
+}
+
+#project p {
+  font-weight: 500;
+  font-size: 24px;
+  color: #445964;
+}
+
+.badge-bootstrap {
+  background-color: #6710f2da;
 }

@@ -10,13 +10,14 @@
 </head>
 <body>
   <div class="container">
+    <!-- home -->
     <div id="home" class="vh-100">
     <!-- home page header section -->
       <section class="row mt-5">
         <section class="col">
           <section class="mx-5">        
             <img src="svg/logo.svg" alt="logo">
-            <span>Chengyue Wei</span>
+            <span class="fs-3 custom-fw">Chengyue Wei</span>
           </section>
         </section>
         <section class="col ">
@@ -25,19 +26,19 @@
               <a href="#home">Home</a>
             </li>
             <li class="nav-item">
-            <a href="">About</a>  
+            <a href="#about">About</a>  
             </li>
             <li class="nav-item">
-              <a href="">Projects</a> 
+              <a href="#project">Projects</a> 
             </li>
             <li class="nav-item">
-              <a href="">Skills</a>  
+              <a href="#skill">Skills</a>  
             </li>
             <li class="nav-item">
               <a href="">Resume</a>  
             </li>
             <li class="nav-item ">
-              <a href="">Contact</a>  
+              <a href="#contact">Contact</a>  
             </li>
           </ul>
         </section>
@@ -82,41 +83,114 @@
         <section class="d-inline-block text-center">
           <img class="portrait" src="svg/logo.svg" alt="portrait">
         </section>
-        <h1 class="text-center">Chengyue Wei</h1>
-        <p class="text-center">My name is Chengyue Wei 👋. I'm from China and currently my last year studying at University of Windsor</p>
-        <h2 class="text-center mt-5">Skills</h2>
+        <h1 class="text-center custom-about-h1">Chengyue Wei</h1>
+        <p class="text-center fs-4 fw-semibold">My name is Chengyue Wei 👋.</p>
+        <p class="text-center fs-4 fw-semibold">I'm from China and currently my last year studying at University of Windsor</p>
+        <p class="text-center fs-4 fw-semibold mb-5">and looking forward to be a Frontend Developer</p>
+        <h1 class="text-center mt-5 custom-about-h1">Skills</h1>
         <div class="container text-center">
           <div class="row">
             <div class="col">
-              <h5>HTML</h5>
-              
+              <h4 class="custom-fw">HTML</h4>
+              <main class="progress bg-secondary">
+                <section class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Example with label" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">90%</section>              
+              </main>
             </div>
             <div class="col">
-              <h5>CSS</h5>
+              <h4 class="custom-fw">CSS</h4>
+              <main class="progress bg-secondary">
+                <section class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Example with label" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">90%</section>              
+              </main>
             </div>
             <div class="col">
-              <h5>JavaScript</h5>
+              <h4 class="custom-fw">JavaScript</h4>
+              <main class="progress bg-secondary">
+                <section class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Example with label" style="width: 60%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">60%</section>              
+              </main>
             </div>
             <div class="col">
-              <h5>Java</h5>
+              <h4 class="custom-fw">Java</h4>
+              <main class="progress bg-secondary">
+                <section class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Example with label" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</section>              
+              </main>
             </div>
           </div>
-          <div class="row">
+          <div class="row mt-5">
             <div class="col">
-              <h5>C</h5>
+              <h4 class="custom-fw">C</h4>
+              <main class="progress bg-secondary">
+                <section class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Example with label" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</section>              
+              </main>
             </div>
             <div class="col">
-              <h5>Python</h5>
+              <h4 class="custom-fw">Python</h4>
+              <main class="progress bg-secondary">
+                <section class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Example with label" style="width: 40%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">40%</section>              
+              </main>
             </div>
             <div class="col">
-              <h5>MySql</h5>
+              <h4 class="custom-fw">MySql</h4>
+              <main class="progress bg-secondary">
+                <section class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Example with label" style="width: 40%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">40%</section>              
+              </main>
             </div>
             <div class="col">
-              <h5>React</h5>
+              <h4 class="custom-fw">React</h4>
+              <main class="progress bg-secondary">
+                <section class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Example with label" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</section>              
+              </main>
             </div>
           </div>
         </div>
       </main>
+    </div>
+
+    <!-- project -->
+    <div id="project" class="vh-100">
+      <div class="empty-box"></div>
+      <main class="d-flex justify-content-start ">
+        <h1 class="custom-about-h1 text-dark">My</h1>
+      </main>
+      <main class="d-flex justify-content-start mb-3">
+        <h1 class="custom-about-h1 h-auto">Projects</h1>
+        <p class="d-flex align-items-center w-50 ms-5 ps-5">here are some of the projects that I had done or participated</p>  
+      </main>   
+      <main class="d-flex flex-row gap-3 mb-5">
+        <span class="badge text-bg-info fs-5">HTML</span>
+        <span class="badge text-bg-info fs-5">CSS</span>
+        <span class="badge text-bg-info fs-5">Bootstrap</span>
+        <span class="badge text-bg-info fs-5">PHP</span>
+      </main>
+      <main class="container text-center">
+        <div class="d-flex gap-3 row mt-5">
+          <div class="col border">
+            <h2 class="custom-fw">Portfolio</h2>
+            <p class="text-start m-0">Description: </p>
+            <span>My personal website that illustrate my work and myself.</span>
+            <section class="text-start">
+              <span class="badge text-bg-danger">HTML</span>
+              <span class="badge text-bg-primary">CSS</span>
+              <span class="badge badge-bootstrap">Bootstrap</span>
+            </section>
+          </div>
+          <div class="col border">
+            <h4>UWCSSA Website</h4>
+          </div>
+          <div class="col border">
+            <h4>Academic Employee management</h4>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- skill -->
+    <div id="skill" class="vh-100">
+
+    </div>
+
+    <!-- contact -->
+    <div id="contact" class="vh-100">
+
     </div>
   </div>
 </body>
