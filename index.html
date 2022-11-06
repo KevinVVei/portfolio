@@ -11,7 +11,7 @@
 <body>
   <div class="container">
     <!-- home -->
-    <div id="home" class="vh-100">
+    <div id="home" class="vh-100 border-bottom ">
     <!-- home page header section -->
       <section class="row mt-5">
         <section class="col">
@@ -20,7 +20,7 @@
             <span class="fs-3 custom-fw">Chengyue Wei</span>
           </section>
         </section>
-        <section class="col ">
+        <section class="col">
           <ul class="nav justify-content-center align-items-center gap-5 my-3 mx">
             <li class="nav-item">
               <a href="#home">Home</a>
@@ -41,9 +41,8 @@
               <a href="#contact">Contact</a>  
             </li>
           </ul>
-        </section>
+        </section>  
       </section>
-
       <!-- home page body section  -->
       <main  class="row mt-5">
         <section class="col mt-5">
@@ -56,7 +55,9 @@
             </p>
           </section>
           <section class="mx-5 h-50 d-flex justify-content-sm-start align-items-center">
-            <button class="w-50 btn btn-primary ">Get In Touch</button>
+            <button class="w-50 btn btn-primary " onclick="location.href='mailto:weiyuezhong2012@gmail.com';">
+              <span>Get In Touch</span>
+            </button>
           </section>
           <section class="mx-5">
             <a href="https://github.com/KevinVVei" target="_blank">
@@ -78,7 +79,7 @@
       </main>
     </div>
     <!-- about page header section -->
-    <div id="about" class="vh-100">
+    <div id="about" class="vh-100 border-bottom">
       <main class="d-flex flex-column justify-content-center">
         <section class="d-inline-block text-center">
           <img class="portrait" src="svg/logo.svg" alt="portrait">
@@ -146,14 +147,14 @@
     </div>
 
     <!-- project -->
-    <div id="project" class="vh-100">
+    <div id="project" class="vh-100 border-bottom ">
       <div class="empty-box"></div>
       <main class="d-flex justify-content-start ">
         <h1 class="custom-about-h1 text-dark">My</h1>
       </main>
       <main class="d-flex justify-content-start mb-3">
         <h1 class="custom-about-h1 h-auto">Projects</h1>
-        <p class="d-flex align-items-center w-50 ms-5 ps-5">here are some of the projects that I had done or participated</p>  
+        <p class="d-flex align-items-center w-50 ms-5 ps-5 project-description">here are some of the projects that I had done or participated</p>  
       </main>   
       <main class="d-flex flex-row gap-3 mb-5">
         <span class="badge text-bg-info fs-5">HTML</span>
@@ -165,34 +166,91 @@
         <div class="d-flex gap-3 row mt-5">
           <div class="col border">
             <h2 class="custom-fw">Portfolio</h2>
-            <p class="text-start m-0">Description: </p>
-            <span>My personal website that illustrate my work and myself.</span>
-            <section class="text-start">
+            <p class="text-start m-0 fw-bold">Description: </p>
+            <p class="text-start">My personal website that illustrate my work and myself.</p>
+            <section class="d-flex gap-2 align-items-end pt-5 mb-1">
               <span class="badge text-bg-danger">HTML</span>
               <span class="badge text-bg-primary">CSS</span>
               <span class="badge badge-bootstrap">Bootstrap</span>
             </section>
           </div>
           <div class="col border">
-            <h4>UWCSSA Website</h4>
+            <h2 class="custom-fw">UWCSSA Website</h2>
+            <p class="text-start m-0 fw-bold">Description: </p>
+            <p class="text-start">Participated in a Academic organization and create web components for them</p>
+            <section class="d-flex gap-2 align-items-end pt-4">
+              <span class="badge text-bg-danger ">React</span>
+              <span class="badge text-bg-primary">MUI</span>
+              <span class="badge badge-bootstrap">Redux</span>
+            </section>
           </div>
           <div class="col border">
-            <h4>Academic Employee management</h4>
+            <h2 class="custom-fw">Academic Employee management</h2>
+            <p class="text-start m-0 fw-bold">Description: </p>
+            <p class="text-start">Academic projects that used to manage employees</p>
+            <section class="d-flex gap-2 align-items-end pt-2">
+              <span class="badge text-bg-danger ">HTML</span>
+              <span class="badge text-bg-primary">CSS</span>
+              <span class="badge badge-bootstrap">PHP</span>
+            </section>
           </div>
         </div>
       </main>
     </div>
 
     <!-- skill -->
-    <div id="skill" class="vh-100">
+    <div id="skill" class="vh-100 border-bottom">
+      <div class="empty-box"></div>
+      <main class="text-center">
+        <p class="d-inline fw-bold fs-1">My </p>
+        <p class="d-inline custom-fw fs-1">Tech Stacks</p>
+      </main>
+      <div class="empty-box"></div>
 
+      <h4 class="text-center">Technologies:</h4>
+      <section class="d-flex flex-column justify-content-center align-items-center">
+        <p class="custom-fw fs-3">Experienced or Learned</p>
+        <ul class="d-flex flex-row gap-5">
+          <li><i class="fa-brands fa-html5 skills-icon text-danger"></i></li>
+          <li><i class="fa-brands fa-css3-alt skills-icon text-primary"></i></li>
+          <li><i class="fa-brands fa-js skills-icon text-warning"></i></li>
+          <li><i class="fa-brands fa-java skills-icon text-secondary"></i></li>
+          <li><i class="fa-brands fa-python skills-icon text-warning"></i></li>
+          <li><i class="fa-solid fa-c skills-icon text-primary"></i></li>
+        </ul>
+      </section>
+      <div class="empty-box"></div>
+      <section class="d-flex flex-column justify-content-center align-items-center">
+        <p class="custom-fw fs-3">Still learning</p>
+          <ul class="d-flex flex-row gap-5">
+            <li><i class="fa-brands fa-node skills-icon text-success"></i></li>
+            <li><img src="svg/redux.svg" class="font-purple text-success" ></li>
+            <li><i class="fa-brands fa-react skills-icon text-primary" ></i></li>
+          </ul>
+      </section>
     </div>
 
     <!-- contact -->
     <div id="contact" class="vh-100">
-
+      <main class="d-flex flex-column justify-content-center align-items-center">
+        <section class="empty-box"></section>
+        <section class="">
+        <h1 class="text-center custom-fw ">Contact</h1>
+        </section>
+        <section class="empty-box"></section>
+        <section >
+          <h3>Send me an Email right away</h3>
+          <button class="contact-button" onclick="location.href='mailto:weiyuezhong2012@gmail.com';">
+            <section class="btn-wrapper">
+              <i class="fa-solid fa-paper-plane"></i>
+            </section>
+            <span>Send</span>
+          </button>
+        </section>
+      </main>
     </div>
   </div>
 </body>
 <script src="https://kit.fontawesome.com/1316ecbaf4.js" crossorigin="anonymous"></script>
+<script src="index.js"></script>
 </html>
