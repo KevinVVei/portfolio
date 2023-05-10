@@ -45,11 +45,30 @@ h5, h1 {
   cursor: default;
 }
 
-.education:hover main {
-  display: block;
-  transition: all 0.5s ease-in-out;
+/* contact */
+.btn-animated {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
 }
 
-.education main {
-  display: none;
+.btn-animated:after {
+  content: "";
+  background: #ffffff;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
 }
+
+.btn-animated:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
+
