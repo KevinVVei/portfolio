@@ -13,7 +13,7 @@ body {
 }
 .navbar {
   padding: 0;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 .navbar-border-color {
   border-bottom: 1px solid #8B4513;
@@ -22,22 +22,47 @@ body {
 .navbar-nav .nav-link {
   /* Normal state */
   color: gray;
-  transition: color 0.5s;
+  position: relative;  /* Add this to allow for ::after pseudo-element positioning */
+  transition: color 0.5s ease-in-out;
 }
+
+.navbar-nav .nav-link::after {
+  /* Underline pseudo-element */
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background: #8B4513;
+  bottom: 15px;
+  left: 0;
+  transition: width 0.3s ease-in-out; /* Modify the duration here */
+}
+
 .navbar-nav .nav-link:hover {
   /* Hover state */
-  color: black;
+  color: #8B4513;
+}
+
+.navbar-nav .nav-link:hover::after {
+  /* Extend the underline pseudo-element on hover */
+  width: 100%;
 }
 
 .navbar-nav .nav-link.active {
   /* Active state */
-  color: black;
-  text-decoration: underline;
+  color: #8B4513;
 }
+
+.navbar-nav .nav-link.active::after {
+  /* Extend the underline pseudo-element for active links */
+  width: 100%;
+}
+
 .navbar-nav .nav-item:not(:hover) .nav-link:not(.active) {
   /* Non-hovered and non-active links */
   color: gray;
 }
+
 
 .container-fluid {
   background-color: #ffcc54;
@@ -78,13 +103,16 @@ h5, h1 {
   gap: 10px;
   margin-top: 20px;
 }
-
 .flags-section img {
   width: 80px;
   height: 60px;
   object-fit: cover;
+  border-radius: 5px;
 }
-
+.flags-section img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
 @media (max-width: 768px) {
   .flags-section img {
     width: 30px;
@@ -193,4 +221,11 @@ h5, h1 {
     font-size: 22px;
     font-weight: bold;
     margin-left: 10px;
+}
+
+.current .brand-name {
+  font-family: 'Courgette', cursive;
+  color: #8B4513;
+  font-weight: bold;
+  font-size: 30px;
 }
