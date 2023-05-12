@@ -15,9 +15,35 @@ body {
   padding: 0;
   font-size: 2em;
 }
+.navbar-border-color {
+  border-bottom: 1px solid #8B4513;
+}
+
+.navbar-nav .nav-link {
+  /* Normal state */
+  color: gray;
+  transition: color 0.5s;
+}
+.navbar-nav .nav-link:hover {
+  /* Hover state */
+  color: black;
+}
+
+.navbar-nav .nav-link.active {
+  /* Active state */
+  color: black;
+  text-decoration: underline;
+}
+.navbar-nav .nav-item:not(:hover) .nav-link:not(.active) {
+  /* Non-hovered and non-active links */
+  color: gray;
+}
+
 .container-fluid {
   background-color: #ffcc54;
 }
+
+/* home */
 .home-container {
   padding: 30px 60px;
   margin: auto;
@@ -26,10 +52,10 @@ h5, h1 {
   display: block;
 }
 #home {
-  scroll-margin-top: 40px;
+  scroll-margin-top: 70px;
 }
 #about {
-  scroll-margin-top: 40px; 
+  scroll-margin-top: 70px; 
 }
 #home span {
   font-size: 1rem;
@@ -41,9 +67,86 @@ h5, h1 {
   text-align: left;
 }
 .list-group-item:hover {
-  background-color: #ffcc54;
+  background-color: #f8f9fa;
   cursor: default;
 }
+.flags-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.flags-section img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .flags-section img {
+    width: 30px;
+    height: 20px;
+  }
+}
+
+
+/* project */
+#projects {
+  scroll-margin-top: 70px; 
+}
+/* Style for the title */
+.animate__animated.animate__backInLeft, .animate__backInRight {
+  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.card-body {
+  padding: 20px;
+}
+.card-body {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+/* Style for the card title */
+.brand-name {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Style for the card text */
+.card-text {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* Style for the button */
+.btn-primary {
+  background-color: #003366;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+.btn-primary:hover {
+  background-color: #004080;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
 
 /* contact */
 .btn-animated {
@@ -72,3 +175,22 @@ h5, h1 {
   transition: 0s;
 }
 
+.btn-primary {
+  background-color: #003366; /* a shade of dark blue */
+  color: #ffffff; /* white text */
+}
+
+.btn-primary:hover {
+  background-color: #004080; /* a slightly lighter shade of dark blue */
+  color: #ffffff; /* white text */
+  transition: background-color 0.5s ease; /* transition effect */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+.brand-name {
+    font-family: 'Courgette', cursive;
+    color: #8B4513;
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 10px;
+}

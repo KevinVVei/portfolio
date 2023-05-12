@@ -8,16 +8,19 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" 
   integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
   <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-md bg-light sticky-sm-top">
+  <nav class="navbar navbar-expand-md bg-light sticky-sm-top navbar-border-color">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
         <img src="images/logo.png" alt="Logo" width="50" height="30" class="d-inline-block align-text-center">
-        Chengyue Wei
+        <span class="brand-name">Chengyue Wei</span>
       </a>
       <button 
         class="navbar-toggler" 
@@ -30,16 +33,16 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#home ">Home</a>
+            <a class="nav-link" aria-current="page" href="#home ">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Resume</a>
+            <a class="nav-link" href="Chengyue_Wei_Resume.pdf" target="_blank">Resume</a>
           </li>          
           <li class="nav-item">
             <a class="nav-link" href="#projects">Projects</a>
@@ -54,15 +57,24 @@
   <!-- Home section -->
   <br>
   <br>
-  <div id="home" class="home-container text-center">
+  <div id="home" class="home-container text-center animate__animated animate__backInLeft">
     <main class="home text-center">
       <h5>Hello, I'm</h5>
-      <h1>Chengyue Wei</h1>
-      <section class="w-50 text-center m-auto">
-        <span>
-          I'm currently a student at the University of Windsor studying Computer Science, and I'm looking forward to be a Front-end Developer.
+      <h1 class="animate__animated animate__backInDown brand-name fs-1">Chengyue Wei</h1>
+      <section class="col-12 col-md-8 col-lg-6 text-center m-auto">
+        <span class="fs-4">
+          Graduated student from University of Windsor major in Computer Science.
         </span>
       </section>   
+      <!-- add a section to put country flags -->
+      <section class="w-50 text-center m-auto">
+        <span class="flags-section">
+          <img src="images/china.png" alt="China" >
+          <img src="images/suriname.png" alt="Suriname">
+          <img src="images/canada.png" alt="Canada">
+          <img src="images/usa.png" alt="USA">
+        </span>
+      </section>
     </main>
     <main class="m-3">
       <a class="me-1" href="https://github.com/KevinVVei" target="_blank">
@@ -82,63 +94,83 @@
   <br><br><br><br><br>
   <!-- about section -->
   <div id="about" class="about text-center">
-    <h1>About Me</h1>
+    <h1 class="animate__animated animate__backInLeft">About Me</h1>
     <h4>Education & Skills</h4>
     <div class="about-container container text-center">
       <div class="row">
+
         <section class="education col">
           <a class="btn btn-primary" data-bs-toggle="collapse" href="#education" role="button" aria-expanded="false" aria-controls="education">
             Education
           </a>
-          <main class="collapse" id="education" >
-            <section class="card card-body mt-3" >
-              <h5>University of Windsor</h5>
-              <p style="text-align: left;">Majored in Compute Science with a degree of Applied Computing</p>
-            </section>  
+          <main class="collapse" id="education">
+            <div class="card mt-3">
+              <div class="card-body">
+                <h5 class="card-title">University of Windsor</h5>
+                <p class="card-text">Majored in Computer Science with a degree of Applied Computing</p>
+              </div>
+            </div>
           </main>
         </section>
-        <section class="skills col ">
+        
+        <section class="skills col">
           <a class="btn btn-primary" data-bs-toggle="collapse" href="#skills" role="button" aria-expanded="false" aria-controls="skills">
             Skills
           </a>
-          <main class="collapse" id="skills" >
-            <section class="card card-body d-flex flex-row justify-content-around mt-3" >
-              <section class="col">
-                <h5>Languages</h5>
-                 <!-- make them hoverable -->
-                <ul class="list-group list-group-flush  ">
-                  <li class="list-group-item">HTML</li>
-                  <li class="list-group-item">CSS</li>
-                  <li class="list-group-item">JavaScript</li>
-                  <li class="list-group-item">Java</li>
-                  <li class="list-group-item">C</li>
-                  <li class="list-group-item">C#</li>
-                  <li class="list-group-item">Python</li>
-                </ul>
-              </section>
-              <section class="col">
-                <h5>Frameworks</h5>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">React</li>
-                  <li class="list-group-item">Bootstrap</li>
-                  <li class="list-group-item">Material UI</li>
-                  <li class="list-group-item">React</li>
-                </ul>
-              </section>
-
-            </section>  
+          <main class="collapse" id="skills">
+            <div class="card mt-3">
+              <div class="card-body">
+                <div class="row">
+                  <section class="col">
+                    <h5 class="mb-3">Languages</h5>
+                    <ul class="list-group">
+                      <li class="list-group-item">HTML</li>
+                      <li class="list-group-item">CSS</li>
+                      <li class="list-group-item">JavaScript</li>
+                      <li class="list-group-item">Java</li>
+                      <li class="list-group-item">C</li>
+                      <li class="list-group-item">C#</li>
+                      <li class="list-group-item">Python</li>
+                    </ul>
+                  </section>
+                  <section class="col">
+                    <h5 class="mb-3">Frameworks</h5>
+                    <ul class="list-group">
+                      <li class="list-group-item">React</li>
+                      <li class="list-group-item">Bootstrap</li>
+                      <li class="list-group-item">Material UI</li>
+                      <li class="list-group-item">React</li>
+                    </ul>
+                  </section>
+                </div>
+              </div>
+            </div>
           </main>
         </section>
+        
         <section class="experiences col">
           <a class="btn btn-primary" data-bs-toggle="collapse" href="#experience" role="button" aria-expanded="false" aria-controls="experience">
             Experience
           </a>
-          <main class="collapse" id="experience" >
-            <section class="card card-body mt-3" >
-              <h5>University of Windsor</h5>
-              <p>Majored in Compute Science with a degree of Applied Computing</p>
-            </section>  
+          <main class="collapse" id="experience">
+            <section class="card card-body mt-3">
+              <h2 class="card-title mb-3">Work Experience</h2>
+              <div class="card mb-3">
+                <div class="card-body">
+                  <h5 class="card-title">Web Developer Intern</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Semper8 Capital Ltd.</h6>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Teaching Assistant</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">University of Windsor</h6>
+                </div>
+              </div>
+            </section>
           </main>
+          
+          
         </section>
       </div>
       
@@ -148,50 +180,49 @@
   <br><br><br><br><br>
   <!-- project section -->
   <div id="projects"  class="projects text-center container w-75">
-    <h1>Projects</h1>
+    <h1 class="animate__animated animate__backInRight">Projects</h1>
     <div class="row row-cols-1 row-cols-md-3 g-4">
       <div class="col">
-        <main class="card">
+        <main class="card animate__animated animate__backInRight">
           <img src="images/logo.png" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">Portfolio</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h5 class="card-title brand-name">Portfolio</h5>
+            <p class="card-text">This is my personal <strong>Portfolio</strong> showcasing my projects, skills, and experiences in software development. It serves as a comprehensive view of my professional journey.</p>
             <a href="#home" class="btn btn-primary">You on it right now</a>
           </div>
         </main>
       </div>
       <div class="col">
-        <main class="card">
+        <main class="card animate__animated animate__backInRight">
           <img src="images/logo.png" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">Integrated Campus Service Portal</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary disabled" >Under Development</a>
+            <h5 class="card-title brand-name">Integrated Campus Service Portal</h5>
+            <p class="card-text">A web portal designed to streamline academic services for students. It integrates various features such as <strong>Campus Events Preview</strong>, <strong>Course Preview</strong>, <strong>Course Recommendation</strong>, and <strong>Personal Bio</strong>.</p>
+            <a href="https://github.com/KevinVVei/comp499b-smart_campus" target="_blank" class="btn btn-primary" >On GitHub</a>
           </div>
         </main>
       </div>
       <div class="col">
-        <main class="card">
+        <main class="card animate__animated animate__backInRight">
           <img src="images/logo.png" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">UWCSSA Web Portal</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h5 class="card-title brand-name">UWCSSA Web Portal</h5>
+            <p class="card-text">A web portal developed for the University of Windsor Chinese Students and Scholars Association (UWCSSA). The portal provides information about <strong>Events</strong>, <strong>Resources</strong>, and <strong>Community News</strong>.</p>
             <a href="https://uwcssa.ca/ " target="_blank" class="btn btn-primary">Visit</a>
           </div>
         </main> 
       </div>     
       <div class="col">
-        <main class="card ">
+        <main class="card animate__animated animate__backInRight">
           <img src="images/logo.png" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">Academic Employee Management</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">On GitHub</a>
+            <h5 class="card-title brand-name">Academic Employee Management</h5>
+            <p class="card-text">A system designed to simplify the management of academic employees. The system supports functions such as tracking employee data, generating reports, and managing employee information.</p>
+            <a href="https://github.com/KevinVVei/Employee-Management" target="_blank" class="btn btn-primary">On GitHub</a>
           </div>
         </main>
       </div>
     </div>
-    
   </div>
 
   <br><br><br><br><br>
@@ -212,16 +243,19 @@
                     <h4 class="mb-4">Feel free to send me an email</h4>
 
                     <!-- Replace 'your-email@example.com' with your email -->
-                    <a href="mailto:your-email@example.com" class="btn btn-primary btn-animated mt-3">
+                    <a href="mailto:weiyuezhong2012@gmail.com" class="btn btn-primary btn-animated mt-3">
                         <i class="fas fa-envelope"></i> Send Email
                     </a>
                 </div>
             </div>
         </div>
     </div>
+    <main>
+      <br>
+      <br>
+
+    </main>
   </div>
-
-
 
   <!-- footer section -->
   <div>
@@ -234,5 +268,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   <script src="index.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
