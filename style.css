@@ -78,9 +78,11 @@ h5, h1 {
 }
 #home {
   scroll-margin-top: 70px;
+  height: 40vh;
 }
 #about {
   scroll-margin-top: 70px; 
+  height: 40vh;
 }
 #home span {
   font-size: 1rem;
