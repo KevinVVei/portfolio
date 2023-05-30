@@ -104,23 +104,29 @@ input:checked + .slider:before {
 body.dark-theme {
   background-color: #444;
   color: #000000;
+  transition: background-color 1s ease-in-out, color 1s ease-in-out;
 }
 body.dark-theme a {
   color: #000000;
+  transition: background-color 1s ease-in-out, color 1s ease-in-out;
+
 }
 body.dark-theme .bg-light {
   background-color: #333 !important;
+  transition: background-color 1s ease-in-out, color 1s ease-in-out;
   color: #000000 !important;
 }
 
 .project-section.dark-theme .bg-light {
   background-color: #444 !important;
   color: #000000 !important;
+  transition: background-color 1s ease-in-out, color 1s ease-in-out;
 }
 
 .contact-section.dark-theme .bg-light {
   background-color: #555 !important;
   color: #000000 !important;
+  transition: background-color 1s ease-in-out, color 1s ease-in-out;
 }
 .transition {
   transition: background-color 1s ease-in-out, color 1s ease-in-out;
