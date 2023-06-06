@@ -23,6 +23,8 @@ a {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     padding: 1rem;
     border-radius: 5px;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 #skills  ul li {
     display: inline-block;
@@ -55,4 +57,52 @@ ul li:nth-child(3) { animation-delay: 0.3s; }
 }
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+/* contact */
+.contact-section {
+  transition: background-color 0.5s ease;
+}
+
+.contact-form {
+  padding: 20px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.contact-form:hover {
+  transform: scale(1.05);
+}
+
+.btn-animated {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-animated::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.btn-animated:hover::after {
+  transform: translateY(0);
+}
+
+.btn-animated:hover {
+  color: white;
+}
+
+.custom-icon {
+  margin-right: 10px;
 }
