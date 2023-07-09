@@ -50,3 +50,18 @@ body {
 .lineHeight {
   line-height: 67px;
 }
+
+.skills section {
+  border: 2px solid;
+  border-image-source: linear-gradient(270deg, #3f87a6, #ebf8e1, #f69d3c);
+  border-image-slice: 1;
+  animation: border-flicker 3s ease-in-out infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes border-flicker {
+  0% {border-image-source: linear-gradient(270deg, #3f87a6, #ebf8e1, #f69d3c);}
+  50% {border-image-source: linear-gradient(90deg, #3f87a6, #ebf8e1, #f69d3c);}
+  100% {border-image-source: linear-gradient(270deg, #3f87a6, #ebf8e1, #f69d3c);}
+}
