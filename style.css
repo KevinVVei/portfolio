@@ -60,6 +60,25 @@ body {
   overflow: hidden;
 }
 
+#contact button {
+  width: 150px;
+  height: 60px;
+  border: 3px solid #315cfd;
+  border-radius: 45px;
+  transition: all 0.3s;
+  cursor: pointer;
+  background: white;
+  font-size: 1.2em;
+  font-weight: 550;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#contact button:hover {
+  background: #315cfd;
+  color: white;
+  font-size: 1.5em;
+}
+
 @keyframes border-flicker {
   0% {border-image-source: linear-gradient(270deg, #3f87a6, #ebf8e1, #f69d3c);}
   50% {border-image-source: linear-gradient(90deg, #3f87a6, #ebf8e1, #f69d3c);}
