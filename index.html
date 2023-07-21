@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Portfolio</title>
   </head>
-  <body class="flex flex-col items-center justify-start font-sans">
+  <body class="flex flex-col items-center justify-center font-sans">
     <nav class="flex flex-row justify-between w-full py-5">
       <div
         class="bg-black text-white w-10 h-10 flex items-center justify-center rounded text-3xl"
@@ -17,11 +17,11 @@
       </div>
 
       <div class="menu text-lg font-bold flex f-row items-center gap-8">
-        <a href="#">Home</a>
+        <!-- <a href="#">Home</a> -->
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
-        <a href="#">Skills</a>
-        <a href="#">Contact</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
       </div>
 
       <div class="media flex f-row justify-end gap-1">
@@ -50,52 +50,12 @@
       </div>
     </nav>
 
-    <div class="hero flex flex-row justify-between w-full h-screen mt-24">
-      <main class="hero-text flex flex-col justify-center w-1/2">
-        <span class="text-3xl mb-8">Hi I'm</span>
-        <span class="text-6xl italic mb-4 font-extrabold">Chengyue Wei</span>
-        <p class="text-3xl">
-          <span class="underline">Front-End Developer</span> &
-          <span class="underline">Software Developer</span>
-        </p>
-        <span class="text-3xl">Currently based in Canada</span>
-        <button class="bg-black text-white w-32 h-10 mt-5 rounded">
-          Contact Me
-        </button>
-      </main>
-      <main class="hero-image w-1/2"></main>
-    </div>
-
-    <div
-      id="about"
-      class="about flex flex-row justify-center items-center w-full h-screen"
-    >
-      <main class="about-image flex w-1/2"></main>
-      <main class="about-text flex flex-col justify-center self-auto w-1/2">
-        <span class="text-4xl mb-8 mx-auto" style="color: #687ba1"
-          >About Me</span
-        >
-        <span class="text-2xl font-semibold w-1/2 mx-auto"
-          >A dedicated Front-End Developer based in Greater Toronto Area,
-          Canada</span
-        >
-        <p class="flex justify-center w-1/2 mx-auto">
-          As a New Grad Front-end Developer & Software Developer, I posses
-          technical skills such as HTML, CSS, JavaScript, React in Front-end
-          field and Java, C, C#, Python in the Back-end field. My expertise lies
-          in crafting dynamic, engaging interfaces through writing clean and
-          optimized code and utilizing cutting-edge development tools and
-          techniques. I am also a team player who thrives in collaborating with
-          cross-functional teams to produce outstanding web applications.
-        </p>
-      </main>
-    </div>
 
     <div
       id="projects"
-      class="projects flex flex-col justify-center items-center w-full h-screen"
+      class="projects w-full h-fit"
     >
-      <span class="text-4xl mb-8 mx-auto" style="color: #687ba1">Projects</span>
+      <p class="text-4xl mb-8 text-center" style="color: #687ba1">Projects</p>
       <main
         class="flex flex-row flex-wrap justify-center items-end w-full gap-8"
       >
@@ -258,10 +218,36 @@
             </a>
           </div>
         </div>
+        <div
+          class="project-card max-w-sm rounded overflow-hidden shadow-lg m-3 transform transition duration-500 hover:scale-105"
+        >
+          <img
+            class="w-full h-64 object-cover"
+            src="images/meme.PNG"
+            alt="Project 1"
+          />
+          <div class="px-6 py-4">
+            <h3 class="font-bold text-xl mb-2">Meme Generator</h3>
+            <p class="text-gray-700 text-base">
+              A library contains all different kinds of components that are
+              often used.
+            </p>
+          </div>
+          <div class="px-6 pt-4 pb-2">
+            <a
+              href="https://meme-generator-three-alpha.vercel.app/"
+              target="_blank"
+              class="bg-black text-white px-3 py-2 rounded hover:bg-gray-800 transition duration-300"
+              style="pointer-events: none; cursor: default"
+            >
+              Needs work
+            </a>
+          </div>
+        </div>
       </main>
     </div>
 
-    <div id="skills" class="skills flex flex-col justify-center items-center w-full px-4">
+    <div id="skills" class="skills  w-full px-4">
       <span class="text-4xl mb-8 mx-auto" style="color: #687ba1">Skills</span>
       <main class="flex flex-col w-full h-full justify-evenly items-center">
         <span class="text-2xl" style="color: #687ba1">Languages:</span>
@@ -303,13 +289,14 @@
       </main>
     </div>
 
-    <div id="contact" class="contact flex jusify-center items-center h-60 my-60">
+    <div id="contact" class="contact flex justify-center items-center my-8 md:my-60">
       <a href="mailto:weiyuezhong2012@gmail.com">
         <button id="contact" class="bg-zinc-400 rounded px-8 py-2 text-center">
           Contact
         </button>
       </a>
     </div>
+    
 
   </body>
   <link rel="stylesheet" href="style.css" />
